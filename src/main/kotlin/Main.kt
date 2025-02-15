@@ -1,5 +1,10 @@
 package org.example
 
+
+var commonParam: Int = 0
+    get() = field - 1
+var commonParam2: Int = 0
+    get() = field + 1
 fun main() {
     var x : Int = 1
     var text : String = "${x} \n个人"
@@ -10,4 +15,7 @@ fun main() {
     
     println(text)
     println(text2)
+    
+    println(commonParam)
+    println(commonParam2)
 }
