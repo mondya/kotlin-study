@@ -6,6 +6,14 @@ fun main() {
     
     
     printClass(ArtStudent(0)) // 打印 student
+    
+    // String类型扩展，需要String.前缀
+    val func: String.() -> Int = {
+        this.length
+    }
+    
+    println("h".func()) // 可以直接对符合类型的对象使用这个函数
+    println(func("l")) // 直接调用，传入对应类型的对象作为首个参数，此时this指向传递的参数
 }
 
 open class Student(var age: Int) {
