@@ -5,6 +5,15 @@ fun main() {
     val value: Int = score.value
     
     val str = genericityMethod("hello") // 调用函数自动明确类型
+    str.apply { 
+        println(this)
+    }
+    
+    var a = Any()
+    var st: Int = a.let { 
+        println(it)
+        1
+    }
 }
 
 class Score<T>(var name: String, var id: String, var value: T)
