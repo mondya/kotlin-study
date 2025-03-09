@@ -17,7 +17,7 @@ fun main() {
     
     // 类似于Java的 ? super
     // Test<Object> test3 = new Test<Object>(10)
-    // Test<>
+    // Test<? super Number> test4 = test3;  Number的父类为Object
     val test3: Test<Any> = Test(10)
     val test4: Test<in Number> = test3
     
