@@ -1,6 +1,16 @@
 package org.example.classPackage
 
-class Student constructor(var name: String, var age: Int) {
+class Student {
+    
+    
+    
+    var name: String? = null
+    var age: Int? = null 
+    
+    constructor(name: String?, age: Int?) {
+        this.name = name
+        this.age = age
+    }
     
     // 次要构造函数，代码块可不写；必须直接或者间接调用主构造函数
     constructor(name: String): this(name, 0) {
